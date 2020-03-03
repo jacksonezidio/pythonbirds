@@ -19,3 +19,13 @@ if __name__ == '__main__':
 
     for filho in jack.filhos:
         print(filho.nome)
+
+    #atributo dinamico
+    jack.sobrenome = "Deus"
+    print(jack.sobrenome)
+
+    #exclui um atributo dinamicamente
+    del jack.filhos
+
+    print(jack.__dict__)
+    print(lorenzo.__dict__)
