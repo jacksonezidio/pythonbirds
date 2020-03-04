@@ -1,5 +1,7 @@
 class Pessoa:
 
+    olhos = 2
+
     def __init__(self,*filhos,nome=None,idade=31):
         self.nome = nome
         self.idade = idade
@@ -29,3 +31,12 @@ if __name__ == '__main__':
 
     print(jack.__dict__)
     print(lorenzo.__dict__)
+
+    print(Pessoa.olhos)
+    print(jack.olhos)
+    print(lorenzo.olhos)
+    print(id(Pessoa.olhos), id(jack.olhos), id(lorenzo.olhos) )
+
+    # alteracao de valor do atributo olhos so de lorenzo
+    lorenzo.olhos = 1
+    print(id(Pessoa.olhos), id(jack.olhos), id(lorenzo.olhos))
