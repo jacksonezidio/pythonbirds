@@ -10,6 +10,14 @@ class Pessoa:
     def cumprimentar(self):
         return f'Olá {id(self)}'
 
+    # decorator
+    @staticmethod
+    def metodo_estatico():
+        return 42
+
+    @classmethod
+    def nome_e_atributos_de_classe(cls):
+        return f'{cls} - olhos {cls.olhos}'
 
 if __name__ == '__main__':
     lorenzo = Pessoa(nome="Lorenzo")
@@ -40,3 +48,7 @@ if __name__ == '__main__':
     # alteracao de valor do atributo olhos so de lorenzo
     lorenzo.olhos = 1
     print(id(Pessoa.olhos), id(jack.olhos), id(lorenzo.olhos))
+
+
+    print(Pessoa.metodo_estatico(), jack.metodo_estatico())
+    print(Pessoa.nome_e_atributos_de_classe(), jack.nome_e_atributos_de_classe())
